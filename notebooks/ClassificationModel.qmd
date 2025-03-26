@@ -12,6 +12,8 @@ format:
 
 This document explores the classification of Antarctic penguins based on morphological characteristics using logistic regression and random forest models. The dataset used is the Palmer Penguins dataset.
 
+The code is taken from the video of [Julia Silge](https://www.youtube.com/watch?v=z57i2GVcdww&pp=ugMICgJlcxABGAHKBRtwYWxtZXIgcGVuZ3VpbnMgSnVsaWEgU2lsZ2U%3D)
+
 # Load Packages
 
 ```{r}
