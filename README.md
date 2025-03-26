@@ -47,5 +47,5 @@ invisible(lapply(required_packages, library, character.only = TRUE))
 ## Ligas para más información:
 
 -   [Tutorial de artículos html en Quarto](https://quarto.org/docs/output-formats/html-basics.html)
-
 -   [Tutorial Quarto Manuscripts de Posit](https://quarto.org/docs/manuscripts/authoring/rstudio.html)
+-   [Carpentries proyectos de Quarto](https://carpentries-incubator.github.io/reproducible-publications-quarto/)
