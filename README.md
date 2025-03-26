@@ -6,19 +6,9 @@
 
 1.  ¿Qué es Quarto?
 2.  ¿Qué es un artículo de Quarto?
-
--   ¿Cual es la utilidad de este tipo de documentos para la reproducibilidad de la ciencia?
--   Tutorial de cómo hacer un documento de Quarto
-
 3.  ¿Cómo escribir un manuscrito en Quarto?
 
--   ¿Cómo utilizar el template de quarto manuscripts?
-
--   Tutorial de las funcionalidades
-
-    -   Insertar figuras de documentos externos y cómo referenciarlas
-    -   Citas bibliográficas
-    -   Publicación de página en github
+**[Temario detallado](https://github.com/sofiazorrilla/taller_quarto_ms/blob/main/plan_taller.md)
 
 ------------------------------------------------------------------------
 
