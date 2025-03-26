@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving
+and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
+  <front>
+    <journal-meta>
+      <journal-id/>
+      <journal-title-group>
+        <journal-title>Earth and Space Science</journal-title>
+      </journal-title-group>
+      <issn/>
+      <publisher>
+        <publisher-name/>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <title-group>
+        <article-title>Diferencias sexuales en especies de pingüinos de la
+Antártida: un análisis basado en características
+morfológicas</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author" corresp="yes">
+          <contrib-id contrib-id-type="orcid">0000-0002-0760-5497</contrib-id>
+          <name>
+            <surname>Rodríguez</surname>
+            <given-names>Juana Perez</given-names>
+          </name>
+          <string-name>Juana Perez Rodríguez</string-name>
+          <email>jperez@enesmorelia.com</email>
+          <role vocab="https://credit.niso.org" vocab-term="investigation" vocab-term-identifier="https://credit.niso.org/contributor-roles/investigation/">Investigation</role>
+          <role vocab="https://credit.niso.org" vocab-term="project administration" vocab-term-identifier="https://credit.niso.org/contributor-roles/project-administration/">Project
+administration</role>
+          <role vocab="https://credit.niso.org" vocab-term="software" vocab-term-identifier="https://credit.niso.org/contributor-roles/software/">Software</role>
+          <role vocab="https://credit.niso.org" vocab-term="visualization" vocab-term-identifier="https://credit.niso.org/contributor-roles/visualization/">Visualization</role>
+          <xref ref-type="aff" rid="aff-1">a</xref>
+          <xref ref-type="corresp" rid="cor-1">*</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <contrib-id contrib-id-type="orcid">0000-0002-7859-8394</contrib-id>
+          <name>
+            <surname>García</surname>
+            <given-names>Simona Cruz</given-names>
+          </name>
+          <string-name>Simona Cruz García</string-name>
+          <xref ref-type="aff" rid="aff-1">a</xref>
+        </contrib>
+      </contrib-group>
+      <aff id="aff-1">
+        <institution-wrap>
+          <institution>ENES Unidad Morelia</institution>
+        </institution-wrap>
+      </aff>
+      <author-notes>
+        <corresp id="cor-1">jperez@enesmorelia.com</corresp>
+      </author-notes>
+      <pub-date date-type="pub" publication-format="electronic" iso-8601-date="2025-03-25">
+        <year>2025</year>
+        <month>3</month>
+        <day>25</day>
+      </pub-date>
+      <history/>
+      <abstract>
+        <p>El dimorfismo sexual es una consecuencia evolutiva de la selección
+sexual y natural, manifestándose en diferencias morfológicas entre
+machos y hembras de una misma especie
+(<xref alt="Darwin 1871" rid="ref-darwin1871" ref-type="bibr">Darwin
+1871</xref>). En este estudio, se evaluó si las características
+morfológicas pueden predecir el sexo de tres especies de pingüinos
+(<italic>Pygoscelis</italic>) en el Archipiélago Palmer, Antártida. Se
+analizaron datos de longitud y profundidad del pico, longitud de la
+aleta y masa corporal mediante modelos de regresión logística y bosque
+aleatorio
+(<xref alt="Hastie, Tibshirani, and Friedman 2009" rid="ref-hastie2009" ref-type="bibr">Hastie,
+Tibshirani, and Friedman 2009</xref>). La regresión logística tuvo un
+mejor rendimiento, con una exactitud de 0.857 y un área bajo la curva
+ROC de 0.938. La profundidad del pico fue el mejor predictor del sexo,
+con un aumento de 1 mm asociado con una probabilidad casi cuatro veces
+mayor de que el individuo sea macho
+(<xref alt="Williams and Croxall 2005" rid="ref-williams2005" ref-type="bibr">Williams
+and Croxall 2005</xref>). Este estudio demuestra que las características
+del pico son indicadores confiables del sexo en pingüinos
+<italic>Pygoscelis</italic>, facilitando estudios ecológicos y de
+comportamiento en estas especies.</p>
+      </abstract>
+      <kwd-group kwd-group-type="author">
+        <kwd>Dimorfismo sexual</kwd>
+        <kwd>Pingüinos Pygoscelis</kwd>
+        <kwd>Morfología</kwd>
+        <kwd>regresión logística</kwd>
+        <kwd>Modelos de clasificación</kwd>
+      </kwd-group>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="introducción">
+      <title>1 Introducción</title>
+      <p>El dimorfismo sexual, o las diferencias morfológicas entre machos y
+  hembras de una misma especie, es una consecuencia evolutiva de la
+  selección sexual y la selección natural
+  (<xref alt="Darwin 1871" rid="ref-darwin1871" ref-type="bibr">Darwin
+  1871</xref>;
+  <xref alt="Trivers 1972" rid="ref-trivers1972" ref-type="bibr">Trivers
+  1972</xref>). Estas diferencias pueden manifestarse en tamaño,
+  coloración, comportamiento o características físicas específicas.
+  Comprender las causas y consecuencias del dimorfismo sexual es
+  importante para entender la ecología, el comportamiento reproductivo y
+  la evolución de las especies
+  (<xref alt="Andersson 1994" rid="ref-andersson1994" ref-type="bibr">Andersson
+  1994</xref>).</p>
+      <p>Sin embargo, sigue siendo incierto si es posible inferir el sexo de
+  ciertas especies animales a partir de sus características
+  morfológicas. Este estudio explora esta cuestión mediante el análisis
+  de datos morfológicos de tres especies de pingüinos
+  (<italic>Pygoscelis</italic>) recolectados en tres islas del
+  Archipiélago Palmer, Antártida
+  (<xref alt="Ainley 2002" rid="ref-ainley2002" ref-type="bibr">Ainley
+  2002</xref>). Este análisis busca determinar si las medidas
+  corporales, como la longitud y profundidad del pico, la longitud de la
+  aleta y la masa corporal, pueden predecir el sexo de los
+  pingüinos.</p>
+    </sec>
+    <sec id="métodos">
+      <title>2 Métodos</title>
+      <sec id="recolección-de-muestras">
+        <title>2.1 Recolección de muestras</title>
+        <p>El trabajo de campo fue realizado en el Archipiélago Palmer, al
+    oeste de la Peninsula Antártica, cerca de la Isla Anvers (64°46′S,
+    64°03′W), durante los veranos australes de 2007/08, 2008/09 y
+    2009/10
+    (<xref alt="Wilson et al. 2018" rid="ref-wilson2018" ref-type="bibr">Wilson
+    et al. 2018</xref>). Las muestras fueron recolectadas en tres islas
+    específicas
+    (<xref alt="Figure 1" rid="fig-mapa-distribucion">Figure 1</xref>):</p>
+        <list list-type="bullet">
+          <list-item>
+            <p><bold>Biscoe Island</bold> (64°48′S, 63°46′W)
+        </p>
+          </list-item>
+          <list-item>
+            <p><bold>Torgersen Island</bold> (64°46′S, 64°04′W)
+        </p>
+          </list-item>
+          <list-item>
+            <p><bold>Dream Island</bold> (64°43′S, 64°13′W)</p>
+          </list-item>
+        </list>
+        <fig id="fig-mapa-distribucion">
+          <caption>
+            <p>Figure 1</p>
+          </caption>
+          <graphic id="fig-mapa-distribucion" mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/notebooks-DataExploration-fig-mapa-distribucion-output-2.png"/>
+        </fig>
+        <p>Cada temporada, se recolectaron datos de 30 nidos de pingüinos
+    Adelia, distribuidos equitativamente entre las tres islas (10 nidos
+    por isla). Los datos de 30 nidos de pingüinos gentoo se recolectaron
+    únicamente en Biscoe Island, mientras que los datos de 15 nidos de
+    pingüinos barbijo fueron recolectados en Dream Island
+    (<xref alt="Table 1" rid="tbl-sampling">Table 1</xref>).</p>
+        <fig id="tbl-sampling">
+          <caption>
+            <p>Table 1: Summary of Penguin Counts by Species, Island,
+      and Sex</p>
+          </caption>
+          <table-wrap>
+            <table style="font-size: 14px; width: auto !important; margin-left: auto; margin-right: auto;">
+              <thead>
+                <tr>
+                  <th align="left">Species</th>
+                  <th align="left">Island</th>
+                  <th align="left">Male</th>
+                  <th align="left">Female</th>
+                  <th align="left">Unkn.</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td align="left" style="font-style: italic">P. adelie</td>
+                  <td align="left">Torgersen</td>
+                  <td align="left">23</td>
+                  <td align="left">24</td>
+                  <td align="left">5</td>
+                </tr>
+                <tr>
+                  <td align="left" style="font-style: italic">P. adelie</td>
+                  <td align="left">Biscoe</td>
+                  <td align="left">22</td>
+                  <td align="left">22</td>
+                  <td align="left"/>
+                </tr>
+                <tr>
+                  <td align="left" style="font-style: italic">P. adelie</td>
+                  <td align="left">Dream</td>
+                  <td align="left">28</td>
+                  <td align="left">27</td>
+                  <td align="left">1</td>
+                </tr>
+                <tr>
+                  <td align="left" style="font-style: italic">P. gentoo</td>
+                  <td align="left">Biscoe</td>
+                  <td align="left">61</td>
+                  <td align="left">58</td>
+                  <td align="left">5</td>
+                </tr>
+                <tr>
+                  <td align="left" style="font-style: italic">P.
+              chinstrap</td>
+                  <td align="left">Dream</td>
+                  <td align="left">34</td>
+                  <td align="left">34</td>
+                  <td align="left"/>
+                </tr>
+              </tbody>
+            </table>
+          </table-wrap>
+        </fig>
+        <p>Las aves fueron capturadas en la etapa de un huevo, y se extrajo
+    una muestra de sangre (~1 ml) de la vena braquial utilizando una
+    jeringa estéril de 3 ml con aguja heparinizada
+    (<xref alt="Lynch and Schwaller 2012" rid="ref-lynch2012" ref-type="bibr">Lynch
+    and Schwaller 2012</xref>) para ser sexadas posteriormente. Las
+    muestras de sangre fueron almacenadas en microtubos de 1.5 ml y
+    congeladas a -80°C para su análisis molecular y de isotopos
+    estables. Además, se registraron las siguientes medidas
+    corporales:</p>
+        <list list-type="bullet">
+          <list-item>
+            <p>Longitud y profundidad del pico (mediante calibradores
+        digitales ±0.1 mm)
+        </p>
+          </list-item>
+          <list-item>
+            <p>Longitud de la aleta (mediante regla ±1 mm)
+        </p>
+          </list-item>
+          <list-item>
+            <p>Masa corporal (mediante balanzas de Pesola de 5 kg ±25 g o 10
+        kg ±50 g)</p>
+          </list-item>
+        </list>
+        <fig id="fig-measureexploration">
+          <caption>
+            <p>Figure 2: Visualización de la distribución de medidas
+      por sexo (triangulo inferior de la matriz; azul = machos, rojo =
+      hembras) y especie (triangulo superior de la matriz: <italic>P.
+      adelie</italic>: rojo, <italic>P. chinstrap</italic>: verde,
+      <italic>P. gentoo</italic>: azul)</p>
+          </caption>
+          <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/notebooks-DataExploration-fig-measureexploration-output-2.png"/>
+        </fig>
+      </sec>
+      <sec id="análisis-estadístico">
+        <title>2.2 Análisis estadístico</title>
+        <p>Se construyeron modelos de regresión logística y de bosque
+    aleatorio para clasificar el sexo de los pingüinos basándose en las
+    características morfológicas
+    (<xref alt="Hastie, Tibshirani, and Friedman 2009" rid="ref-hastie2009" ref-type="bibr">Hastie,
+    Tibshirani, and Friedman 2009</xref>). La estructura de los modelos
+    fue la siguiente:</p>
+        <list list-type="bullet">
+          <list-item>
+            <p><bold>Regresión logística</bold>:
+        Modelo de clasificación utilizando la función
+        <monospace>logistic_reg()</monospace> en R, con el motor
+        <monospace>glm</monospace>.</p>
+          </list-item>
+          <list-item>
+            <p><bold>Random Forest</bold>:
+        Modelo de clasificación utilizando
+        <monospace>rand_forest()</monospace> en R, con el motor
+        <monospace>ranger</monospace>.</p>
+          </list-item>
+        </list>
+        <p>Se realizaron remuestreos mediante
+    <monospace>bootstrapping</monospace> para evaluar la estabilidad de
+    los modelos y se midió la precisión mediante la métrica de exactitud
+    (<monospace>accuracy</monospace>) y el área bajo la curva ROC
+    (<monospace>roc_auc</monospace>)
+    (<xref alt="Breiman 2001" rid="ref-breiman2001" ref-type="bibr">Breiman
+    2001</xref>).</p>
+      </sec>
+    </sec>
+    <sec id="resultados">
+      <title>3 Resultados</title>
+      <p>Los resultados muestran que el modelo de regresión logística tuvo
+  un mejor rendimiento que el modelo de bosque aleatorio. La exactitud y
+  el área bajo la curva ROC fueron las siguientes:</p>
+      <list list-type="bullet">
+        <list-item>
+          <p><bold>Exactitud</bold>: 0.857
+      </p>
+        </list-item>
+        <list-item>
+          <p><bold>ROC AUC</bold>: 0.9382086</p>
+        </list-item>
+      </list>
+      <fig id="tbl-res">
+        <caption>
+          <p>Table 2: Logistic Regression Classigication Model
+    Coefficients</p>
+        </caption>
+        <table-wrap>
+          <table style="font-size: 14px; width: auto !important; margin-left: auto; margin-right: auto;">
+            <thead>
+              <tr>
+                <th align="left">Term</th>
+                <th align="right">Estimate</th>
+                <th align="right">Std.error</th>
+                <th align="right">Statistic</th>
+                <th align="right">P.value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td align="left">(Intercept)</td>
+                <td align="right">0.000</td>
+                <td align="right">19.620</td>
+                <td align="right">-5.309</td>
+                <td align="right">0.000</td>
+              </tr>
+              <tr>
+                <td align="left">speciesChinstrap</td>
+                <td align="right">0.000</td>
+                <td align="right">2.344</td>
+                <td align="right">-3.794</td>
+                <td align="right">0.000</td>
+              </tr>
+              <tr>
+                <td align="left">speciesGentoo</td>
+                <td align="right">0.000</td>
+                <td align="right">3.753</td>
+                <td align="right">-3.032</td>
+                <td align="right">0.002</td>
+              </tr>
+              <tr>
+                <td align="left">bill_length_mm</td>
+                <td align="right">1.908</td>
+                <td align="right">0.180</td>
+                <td align="right">3.597</td>
+                <td align="right">0.000</td>
+              </tr>
+              <tr>
+                <td align="left">bill_depth_mm</td>
+                <td align="right">8.363</td>
+                <td align="right">0.478</td>
+                <td align="right">4.448</td>
+                <td align="right">0.000</td>
+              </tr>
+              <tr>
+                <td align="left">flipper_length_mm</td>
+                <td align="right">1.058</td>
+                <td align="right">0.061</td>
+                <td align="right">0.926</td>
+                <td align="right">0.355</td>
+              </tr>
+              <tr>
+                <td align="left">body_mass_g</td>
+                <td align="right">1.008</td>
+                <td align="right">0.002</td>
+                <td align="right">4.591</td>
+                <td align="right">0.000</td>
+              </tr>
+            </tbody>
+          </table>
+        </table-wrap>
+      </fig>
+      <p>El análisis de razones de momios
+  (<monospace>odds ratio</monospace>) indicó que la mayor asociación con
+  el sexo fue para la profundidad del pico, seguida por la longitud del
+  pico
+  (<xref alt="Williams and Croxall 2005" rid="ref-williams2005" ref-type="bibr">Williams
+  and Croxall 2005</xref>). Un aumento de 1 mm en la profundidad del
+  pico se asocia con una probabilidad casi cuatro veces mayor de que el
+  individuo sea macho. Por otro lado, la longitud de la aleta no mostró
+  evidencia significativa de diferenciación entre machos y hembras
+  cuando se controlaron las otras variables
+  (<xref alt="Table 2" rid="tbl-res">Table 2</xref>).</p>
+    </sec>
+    <sec id="discusión">
+      <title>4 Discusión</title>
+      <p>La capacidad de inferir el sexo de los pingüinos a partir de datos
+  morfológicos tiene importantes implicaciones ecológicas y evolutivas
+  (<xref alt="Croxall 1995" rid="ref-croxall1995" ref-type="bibr">Croxall
+  1995</xref>). La diferenciación sexual basada en la morfología puede
+  estar relacionada con la selección sexual o con la adaptación a
+  diferentes roles ecológicos. La profundidad y longitud del pico pueden
+  reflejar diferencias en la dieta o en el comportamiento reproductivo
+  entre machos y hembras
+  (<xref alt="Polito et al. 2016" rid="ref-polito2016" ref-type="bibr">Polito
+  et al. 2016</xref>).</p>
+      <p>Además, la posibilidad de determinar el sexo mediante datos
+  morfológicos facilita estudios sobre dinámica poblacional y
+  comportamiento reproductivo, sin la necesidad de técnicas invasivas de
+  determinación de sexo
+  (<xref alt="Polito et al. 2016" rid="ref-polito2016" ref-type="bibr">Polito
+  et al. 2016</xref>).</p>
+    </sec>
+    <sec id="conclusión">
+      <title>5 Conclusión</title>
+      <p>Este estudio demuestra que las características del pico son
+  indicadores confiables del sexo en especies de pingüinos
+  <italic>Pygoscelis</italic>. La regresión logística proporcionó una
+  alta exactitud y poder predictivo. La capacidad de inferir el sexo a
+  partir de datos morfológicos ofrece nuevas oportunidades para estudios
+  ecológicos y de comportamiento en poblaciones de pingüinos en la
+  Antártida
+  (<xref alt="Trivelpiece et al. 2011" rid="ref-trivelpiece2011" ref-type="bibr">Trivelpiece
+  et al. 2011</xref>).</p>
+    </sec>
+  </body>
+  <back>
+    <ref-list>
+      <title>6 Referencias</title>
+      <ref id="ref-darwin1871">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Darwin</surname>
+              <given-names>Charles</given-names>
+            </name>
+          </person-group>
+          <source>The descent of man, and selection in relation to sex</source>
+          <publisher-name>John Murray</publisher-name>
+          <publisher-loc>London</publisher-loc>
+          <year iso-8601-date="1871">1871</year>
+        </element-citation>
+      </ref>
+      <ref id="ref-andersson1994">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Andersson</surname>
+              <given-names>Malte</given-names>
+            </name>
+          </person-group>
+          <source>Sexual selection</source>
+          <publisher-name>Princeton University Press</publisher-name>
+          <publisher-loc>Princeton</publisher-loc>
+          <year iso-8601-date="1994">1994</year>
+        </element-citation>
+      </ref>
+      <ref id="ref-trivers1972">
+        <element-citation publication-type="article-journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Trivers</surname>
+              <given-names>Robert L</given-names>
+            </name>
+          </person-group>
+          <article-title>Parental investment and sexual selection</article-title>
+          <source>Sexual Selection and the Descent of Man</source>
+          <person-group person-group-type="editor">
+            <name>
+              <surname>Campbell</surname>
+              <given-names>Bernard</given-names>
+            </name>
+          </person-group>
+          <publisher-name>Aldine Press</publisher-name>
+          <publisher-loc>Chicago</publisher-loc>
+          <year iso-8601-date="1972">1972</year>
+          <fpage>136</fpage>
+          <lpage>179</lpage>
+        </element-citation>
+      </ref>
+      <ref id="ref-ainley2002">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ainley</surname>
+              <given-names>David G</given-names>
+            </name>
+          </person-group>
+          <source>The adélie penguin: Bellwether of climate change</source>
+          <publisher-name>Columbia University Press</publisher-name>
+          <publisher-loc>New York</publisher-loc>
+          <year iso-8601-date="2002">2002</year>
+        </element-citation>
+      </ref>
+      <ref id="ref-williams2005">
+        <element-citation publication-type="article-journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Williams</surname>
+              <given-names>Tony D</given-names>
+            </name>
+            <name>
+              <surname>Croxall</surname>
+              <given-names>John P</given-names>
+            </name>
+          </person-group>
+          <article-title>Morphometric sex identification of pygoscelis penguins: Not as easy as it looks</article-title>
+          <source>Marine Ecology Progress Series</source>
+          <year iso-8601-date="2005">2005</year>
+          <volume>296</volume>
+          <pub-id pub-id-type="doi">10.3354/meps296141</pub-id>
+          <fpage>141</fpage>
+          <lpage>150</lpage>
+        </element-citation>
+      </ref>
+      <ref id="ref-croxall1995">
+        <element-citation publication-type="article-journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Croxall</surname>
+              <given-names>John P</given-names>
+            </name>
+          </person-group>
+          <article-title>Sexual size dimorphism and breeding biology in southern giant petrels, macronectes giganteus</article-title>
+          <source>Oikos</source>
+          <year iso-8601-date="1995">1995</year>
+          <volume>73</volume>
+          <issue>1</issue>
+          <pub-id pub-id-type="doi">10.2307/3545728</pub-id>
+          <fpage>79</fpage>
+          <lpage>87</lpage>
+        </element-citation>
+      </ref>
+      <ref id="ref-polito2016">
+        <element-citation publication-type="article-journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Polito</surname>
+              <given-names>Michael J</given-names>
+            </name>
+            <name>
+              <surname>Hinke</surname>
+              <given-names>Jefferson T</given-names>
+            </name>
+            <name>
+              <surname>Hart</surname>
+              <given-names>Tom</given-names>
+            </name>
+            <name>
+              <surname>Santos</surname>
+              <given-names>Mercedes</given-names>
+            </name>
+            <name>
+              <surname>Houghton</surname>
+              <given-names>Lucy A</given-names>
+            </name>
+            <name>
+              <surname>Thorrold</surname>
+              <given-names>Simon R</given-names>
+            </name>
+          </person-group>
+          <article-title>Stable isotope analyses of feather amino acids identify penguin migration strategies at ocean basin scales</article-title>
+          <source>Biology Letters</source>
+          <year iso-8601-date="2016">2016</year>
+          <volume>12</volume>
+          <issue>8</issue>
+          <pub-id pub-id-type="doi">10.1098/rsbl.2016.0024</pub-id>
+          <fpage>20160024</fpage>
+          <lpage/>
+        </element-citation>
+      </ref>
+      <ref id="ref-hastie2009">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hastie</surname>
+              <given-names>Trevor</given-names>
+            </name>
+            <name>
+              <surname>Tibshirani</surname>
+              <given-names>Robert</given-names>
+            </name>
+            <name>
+              <surname>Friedman</surname>
+              <given-names>Jerome</given-names>
+            </name>
+          </person-group>
+          <source>The elements of statistical learning: Data mining, inference, and prediction</source>
+          <publisher-name>Springer</publisher-name>
+          <publisher-loc>New York</publisher-loc>
+          <year iso-8601-date="2009">2009</year>
+          <edition>2</edition>
+        </element-citation>
+      </ref>
+      <ref id="ref-breiman2001">
+        <element-citation publication-type="article-journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Breiman</surname>
+              <given-names>Leo</given-names>
+            </name>
+          </person-group>
+          <article-title>Random forests</article-title>
+          <source>Machine Learning</source>
+          <year iso-8601-date="2001">2001</year>
+          <volume>45</volume>
+          <issue>1</issue>
+          <pub-id pub-id-type="doi">10.1023/A:1010933404324</pub-id>
+          <fpage>5</fpage>
+          <lpage>32</lpage>
+        </element-citation>
+      </ref>
+      <ref id="ref-trivelpiece2011">
+        <element-citation publication-type="article-journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Trivelpiece</surname>
+              <given-names>Wayne Z</given-names>
+            </name>
+            <name>
+              <surname>Hinke</surname>
+              <given-names>Jefferson T</given-names>
+            </name>
+            <name>
+              <surname>Miller</surname>
+              <given-names>Aileen K</given-names>
+            </name>
+            <name>
+              <surname>Reiss</surname>
+              <given-names>Christian S</given-names>
+            </name>
+            <name>
+              <surname>Trivelpiece</surname>
+              <given-names>Susan G</given-names>
+            </name>
+            <name>
+              <surname>Watters</surname>
+              <given-names>George M</given-names>
+            </name>
+          </person-group>
+          <article-title>Variability in krill biomass links harvesting and climate warming to penguin population changes in antarctica</article-title>
+          <source>Proceedings of the National Academy of Sciences</source>
+          <year iso-8601-date="2011">2011</year>
+          <volume>108</volume>
+          <issue>18</issue>
+          <pub-id pub-id-type="doi">10.1073/pnas.1016560108</pub-id>
+          <fpage>7625</fpage>
+          <lpage>7628</lpage>
+        </element-citation>
+      </ref>
+      <ref id="ref-lynch2012">
+        <element-citation publication-type="article-journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lynch</surname>
+              <given-names>Heather J</given-names>
+            </name>
+            <name>
+              <surname>Schwaller</surname>
+              <given-names>Mathew R</given-names>
+            </name>
+          </person-group>
+          <article-title>Detection, differentiation, and abundance estimation of penguin species by high-resolution satellite imagery</article-title>
+          <source>Polar Biology</source>
+          <year iso-8601-date="2012">2012</year>
+          <volume>35</volume>
+          <issue>6</issue>
+          <pub-id pub-id-type="doi">10.1007/s00300-011-1138-3</pub-id>
+          <fpage>963</fpage>
+          <lpage>968</lpage>
+        </element-citation>
+      </ref>
+      <ref id="ref-wilson2018">
+        <element-citation publication-type="article-journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Wilson</surname>
+              <given-names>Kerry Jane</given-names>
+            </name>
+            <name>
+              <surname>Waugh</surname>
+              <given-names>Susan M</given-names>
+            </name>
+            <name>
+              <surname>Taylor</surname>
+              <given-names>Rohan H</given-names>
+            </name>
+            <name>
+              <surname>Southey</surname>
+              <given-names>Ian</given-names>
+            </name>
+          </person-group>
+          <article-title>Long-term monitoring of adélie penguin population change at the palmer archipelago: Methods and data quality</article-title>
+          <source>Antarctic Science</source>
+          <year iso-8601-date="2018">2018</year>
+          <volume>30</volume>
+          <issue>3</issue>
+          <pub-id pub-id-type="doi">10.1017/S0954102017000451</pub-id>
+          <fpage>151</fpage>
+          <lpage>163</lpage>
+        </element-citation>
+      </ref>
+    </ref-list>
+  </back>
+  <!-- (F2ED4C6E)[nb-1]:/home/sofia/Documents/talleres/taller-quarto-ms/manuscript-template-rstudio/notebooks/ClassificationModel.qmd -->
+  <!-- (F2ED4C6E)[nb-2]:/home/sofia/Documents/talleres/taller-quarto-ms/manuscript-template-rstudio/notebooks/DataExploration.qmd -->
+</article>
