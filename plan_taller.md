@@ -9,7 +9,7 @@
     ![Source: Comic number 1869 from PhD Comics Copyrighted artwork by Jorge Cham](https://carpentries-incubator.github.io/reproducible-publications-quarto/fig/01-fig1.png){width="481"}
 
     -   [Ejemplo de repositorio real](https://github.com/JulietteArchambeau/GOPredEvalPinpin?tab=readme-ov-file) - Juliette Archambeau
-    -   [Ejemplo repositorio reprohack](https://r-ladies-morelia.github.io/Reprohack2024/Grupo2/docs/index.html) y [repo](https://github.com/R-Ladies-Morelia/Reprohack2024/tree/main/Grupo2)
+    -   [Ejemplo documento reprohack](https://r-ladies-morelia.github.io/Reprohack2024/Grupo2/docs/index.html) y [repo](https://github.com/R-Ladies-Morelia/Reprohack2024/tree/main/Grupo2)
 
 2.  ¿Qué es Quarto?
 
