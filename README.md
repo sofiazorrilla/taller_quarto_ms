@@ -8,7 +8,7 @@
 2.  ¿Qué es un artículo de Quarto?
 3.  ¿Cómo escribir un manuscrito en Quarto?
 
-**[Temario detallado](https://github.com/sofiazorrilla/taller_quarto_ms/blob/main/plan_taller.md)
+**[Temario detallado](https://github.com/sofiazorrilla/taller_quarto_ms/blob/main/plan_taller.md)**
 
 ------------------------------------------------------------------------
 
