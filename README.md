@@ -2,14 +2,12 @@
 
 **Viernes de Bioinformatica 28/marzo/2025**
 
-Temas:
+### Temas:
 
 1.  ¿Qué es Quarto?
-
 2.  ¿Qué es un artículo de Quarto?
 
 -   ¿Cual es la utilidad de este tipo de documentos para la reproducibilidad de la ciencia?
-
 -   Tutorial de cómo hacer un documento de Quarto
 
 3.  ¿Cómo escribir un manuscrito en Quarto?
@@ -19,10 +17,12 @@ Temas:
 -   Tutorial de las funcionalidades
 
     -   Insertar figuras de documentos externos y cómo referenciarlas
-
     -   Citas bibliográficas
-
     -   Publicación de página en github
+
+------------------------------------------------------------------------
+
+## Requisitos
 
 Para la realización del taller he preparado código de muestra sobre el set de datos de Palmer Penguins. Para seguir los tutoriales asegurate de tener lo siguiente:
 
@@ -52,6 +52,10 @@ invisible(lapply(required_packages, library, character.only = TRUE))
 
 -   Una cuenta de github
 
-## Ligas para más información
+------------------------------------------------------------------------
 
-[Tutorial Quarto Manuscripts de Posit](https://quarto.org/docs/manuscripts/authoring/rstudio.html)
+## Ligas para más información:
+
+-   [Tutorial de artículos html en Quarto](https://quarto.org/docs/output-formats/html-basics.html)
+
+-   [Tutorial Quarto Manuscripts de Posit](https://quarto.org/docs/manuscripts/authoring/rstudio.html)
