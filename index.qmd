@@ -46,7 +46,7 @@ Sin embargo, sigue siendo incierto si es posible inferir el sexo de ciertas espe
 
 ### Recolección de muestras
 
-El trabajo de campo fue realizado en el Archipiélago Palmer, al oeste de la Península Antártica, cerca de la Isla Anvers (64°46′S, 64°03′W), durante los veranos australes de 2007/08, 2008/09 y 2009/10 [@wilson2018]. Las muestras fueron recolectadas en tres islas específicas (@fig-mapa-distribucion):
+El trabajo de campo fue realizado en el Archipiélago Palmer, al oeste de la Peninsula Antártica, cerca de la Isla Anvers (64°46′S, 64°03′W), durante los veranos australes de 2007/08, 2008/09 y 2009/10 [@wilson2018]. Las muestras fueron recolectadas en tres islas específicas (@fig-mapa-distribucion):
 
 - **Biscoe Island** (64°48′S, 63°46′W)  
 - **Torgersen Island** (64°46′S, 64°04′W)  
