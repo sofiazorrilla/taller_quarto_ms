@@ -83,12 +83,11 @@ final_map
 # Sampling size table --------------------------------------------------------
 
 # Sampling size
-penguins %>% summarise(n = n(), .by = c(species, island, sex))
-
-# Table for publication
 levels(penguins$sex) <- c("female", "male","Unkn.")
 levels(penguins$species) <- c("P. adelie", "P. chinstrap", "P. gentoo")
 penguins$sex[is.na(penguins$sex)] <- "Unkn."
+
+library(kableExtra)
 
 penguins %>% 
   # Summarize data by species, island, and sex
@@ -105,27 +104,21 @@ penguins %>%
     values_fill = list(n = "")
   ) %>% 
   
-  # Create gt table, grouping by species
-  gt(groupname_col = "species") %>% 
-  
-  # Customize column labels
-  cols_label(
-    island = "Species/Island", 
-    male = "Male", 
-    female = "Female"
+  # Create kable table
+  kbl(
+    caption = "Summary of Penguin Counts by Species, Island, and Sex", 
+    col.names = c("Species", "Island", "Male", "Female", "Unkn.")
   ) %>% 
   
   # Bold column labels
-  tab_style(
-    style = cell_text(weight = "bold"), 
-    locations = cells_column_labels()
+  kable_styling(
+    full_width = FALSE, 
+    bootstrap_options = c("striped", "hover"), 
+    font_size = 14
   ) %>% 
   
-  # Italicize row group labels (species)
-  tab_style(
-    style = cell_text(style = "italic"),
-    locations = cells_row_groups()
-  )
+  # Italicize species names in row groups
+  column_spec(1, italic = TRUE)
 
 
 # Visualization of variables per sex -------------------------------------

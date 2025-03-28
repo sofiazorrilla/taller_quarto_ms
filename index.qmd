@@ -38,7 +38,7 @@ number-sections: true
 
 ## Introducción
 
-El dimorfismo sexual, o las diferencias morfológicas entre machos y hembras de una misma especie, es una consecuencia evolutiva de la selección sexual y la selección natural [@darwin1871; @trivers1972]. Estas diferencias pueden manifestarse en tamaño, coloración, comportamiento o características físicas específicas. Comprender las causas y consecuencias del dimorfismo sexual es importante para entender la ecología, el comportamiento reproductivo y la evolución de las especies [@andersson1994].
+El dimorfismo sexual, o las diferencias morfológicas entre machos y hembras de una misma especie, es una consecuencia evolutiva de la selección sexual y la selección natural [@darwin1871; @trivers1972]. Estas diferencias pueden manifestarse en tamaño, coloración, comportamiento o características físicas específicas. Comprender las causas y consecuencias del dimorfismo sexual es importante para entender la ecología, el comportamiento reproductivo y la evolución de las especies \[@andersson1994\].
 
 Sin embargo, sigue siendo incierto si es posible inferir el sexo de ciertas especies animales a partir de sus características morfológicas. Este estudio explora esta cuestión mediante el análisis de datos morfológicos de tres especies de pingüinos (*Pygoscelis*) recolectados en tres islas del Archipiélago Palmer, Antártida [@ainley2002]. Este análisis busca determinar si las medidas corporales, como la longitud y profundidad del pico, la longitud de la aleta y la masa corporal, pueden predecir el sexo de los pingüinos.
 
@@ -48,9 +48,9 @@ Sin embargo, sigue siendo incierto si es posible inferir el sexo de ciertas espe
 
 El trabajo de campo fue realizado en el Archipiélago Palmer, al oeste de la Peninsula Antártica, cerca de la Isla Anvers (64°46′S, 64°03′W), durante los veranos australes de 2007/08, 2008/09 y 2009/10 [@wilson2018]. Las muestras fueron recolectadas en tres islas específicas (@fig-mapa-distribucion):
 
-- **Biscoe Island** (64°48′S, 63°46′W)  
-- **Torgersen Island** (64°46′S, 64°04′W)  
-- **Dream Island** (64°43′S, 64°13′W)  
+-   **Biscoe Island** (64°48′S, 63°46′W)\
+-   **Torgersen Island** (64°46′S, 64°04′W)\
+-   **Dream Island** (64°43′S, 64°13′W)
 
 {{< embed notebooks/DataExploration.qmd#fig-mapa-distribucion >}}
 
@@ -58,11 +58,11 @@ Cada temporada, se recolectaron datos de 30 nidos de pingüinos Adelia, distribu
 
 {{< embed notebooks/DataExploration.qmd#tbl-sampling >}}
 
-Las aves fueron capturadas en la etapa de un huevo, y se extrajo una muestra de sangre (~1 ml) de la vena braquial utilizando una jeringa estéril de 3 ml con aguja heparinizada [@lynch2012] para ser sexadas posteriormente. Las muestras de sangre fueron almacenadas en microtubos de 1.5 ml y congeladas a -80°C para su análisis molecular y de isotopos estables. Además, se registraron las siguientes medidas corporales:
+Las aves fueron capturadas en la etapa de un huevo, y se extrajo una muestra de sangre (\~1 ml) de la vena braquial utilizando una jeringa estéril de 3 ml con aguja heparinizada [@lynch2012] para ser sexadas posteriormente. Las muestras de sangre fueron almacenadas en microtubos de 1.5 ml y congeladas a -80°C para su análisis molecular y de isotopos estables. Además, se registraron las siguientes medidas corporales:
 
-- Longitud y profundidad del pico (mediante calibradores digitales ±0.1 mm)  
-- Longitud de la aleta (mediante regla ±1 mm)  
-- Masa corporal (mediante balanzas de Pesola de 5 kg ±25 g o 10 kg ±50 g)  
+-   Longitud y profundidad del pico (mediante calibradores digitales ±0.1 mm)\
+-   Longitud de la aleta (mediante regla ±1 mm)\
+-   Masa corporal (mediante balanzas de Pesola de 5 kg ±25 g o 10 kg ±50 g)
 
 {{< embed notebooks/DataExploration.qmd#fig-MeasureExploration >}}
 
@@ -70,11 +70,11 @@ Las aves fueron capturadas en la etapa de un huevo, y se extrajo una muestra de 
 
 Se construyeron modelos de regresión logística y de bosque aleatorio para clasificar el sexo de los pingüinos basándose en las características morfológicas [@hastie2009]. La estructura de los modelos fue la siguiente:
 
-- **Regresión logística**:  
-  Modelo de clasificación utilizando la función `logistic_reg()` en R, con el motor `glm`.  
-  
-- **Random Forest**:  
-  Modelo de clasificación utilizando `rand_forest()` en R, con el motor `ranger`.  
+-   **Regresión logística**:\
+    Modelo de clasificación utilizando la función `logistic_reg()` en R, con el motor `glm`.
+
+-   **Random Forest**:\
+    Modelo de clasificación utilizando `rand_forest()` en R, con el motor `ranger`.
 
 Se realizaron remuestreos mediante `bootstrapping` para evaluar la estabilidad de los modelos y se midió la precisión mediante la métrica de exactitud (`accuracy`) y el área bajo la curva ROC (`roc_auc`) [@breiman2001].
 
@@ -82,14 +82,12 @@ Se realizaron remuestreos mediante `bootstrapping` para evaluar la estabilidad d
 
 Los resultados muestran que el modelo de regresión logística tuvo un mejor rendimiento que el modelo de bosque aleatorio. La exactitud y el área bajo la curva ROC fueron las siguientes:
 
-- **Exactitud**: 0.857  
-- **ROC AUC**: 0.9382086  
+-   **Exactitud**: 0.857\
+-   **ROC AUC**: 0.9382086
 
 {{< embed notebooks/ClassificationModel.qmd#tbl-res >}}
 
 El análisis de razones de momios (`odds ratio`) indicó que la mayor asociación con el sexo fue para la profundidad del pico, seguida por la longitud del pico [@williams2005]. Un aumento de 1 mm en la profundidad del pico se asocia con una probabilidad casi cuatro veces mayor de que el individuo sea macho. Por otro lado, la longitud de la aleta no mostró evidencia significativa de diferenciación entre machos y hembras cuando se controlaron las otras variables (@tbl-res).
-
-
 
 ## Discusión
 
