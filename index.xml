@@ -74,10 +74,10 @@ administration</role>
 <corresp id="cor-1">jperez@enesmorelia.com</corresp>
 </author-notes>
 
-<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2025-03-26">
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2025-03-28">
 <year>2025</year>
 <month>3</month>
-<day>26</day>
+<day>28</day>
 </pub-date>
 
 
@@ -140,9 +140,8 @@ comportamiento en estas especies.</p>
   coloración, comportamiento o características físicas específicas.
   Comprender las causas y consecuencias del dimorfismo sexual es
   importante para entender la ecología, el comportamiento reproductivo y
-  la evolución de las especies
-  (<xref alt="Andersson 1994" rid="ref-andersson1994" ref-type="bibr">Andersson
-  1994</xref>).</p>
+  la evolución de las especies [Andersson
+  (<xref alt="1994" rid="ref-andersson1994" ref-type="bibr">1994</xref>)].</p>
   <p>Sin embargo, sigue siendo incierto si es posible inferir el sexo de
   ciertas especies animales a partir de sus características
   morfológicas. Este estudio explora esta cuestión mediante el análisis
@@ -640,58 +639,90 @@ comportamiento en estas especies.</p>
 <body>
 <sec id="plan-para-el-taller-nb-3">
   <title>Plan para el taller</title>
+  <p><bold>Reproducibilidad en la ciencia</bold></p>
+  <list list-type="bullet">
+    <list-item>
+      <p>Experiencia personal - ¿Alguna vez has tratado de reproducir
+      tus propios resultados y te ha parecido difícil?</p>
+    </list-item>
+    <list-item>
+      <p>Experiencia corriendo el código de alguien más - ¿Alguna vez
+      has encontrado el artículo que podría ser perfecto para aprender a
+      hacer un análisis pero su código no se entiende?</p>
+    </list-item>
+  </list>
+  <fig>
+    <caption><p>Source: Comic number 1869 from PhD Comics Copyrighted
+    artwork by Jorge Cham</p></caption>
+    <graphic mimetype="image" mime-subtype="png" xlink:href="img/chiste.png" />
+  </fig>
+  <fig>
+    <caption><p>Baker, M. 1,500 scientists lift the lid on
+    reproducibility. Nature 533, 452–454 (2016).
+    https://doi.org/10.1038/533452a</p></caption>
+    <graphic mimetype="image" mime-subtype="png" xlink:href="img/crisis.png" />
+  </fig>
+  <list list-type="bullet">
+    <list-item>
+      <p>Hay muchos factores que explican la irreproducibilidad</p>
+      <list list-type="bullet">
+        <list-item>
+          <p>Datos originales no disponibles</p>
+        </list-item>
+        <list-item>
+          <p>Software no disponible o actualizado</p>
+        </list-item>
+        <list-item>
+          <p><bold>No está suficientemente documentado</bold> y/o es
+          difícil seguir los pasos</p>
+        </list-item>
+      </list>
+    </list-item>
+    <list-item>
+      <p>Hay muchos pasos para alcanzar la reproducibilidad - Hay que
+      aprender poco a poco</p>
+    </list-item>
+    <list-item>
+      <p><ext-link ext-link-type="uri" xlink:href="https://github.com/JulietteArchambeau/GOPredEvalPinpin?tab=readme-ov-file">Ejemplo
+      de repositorio real</ext-link> - Juliette Archambeau</p>
+    </list-item>
+    <list-item>
+      <p><ext-link ext-link-type="uri" xlink:href="https://r-ladies-morelia.github.io/Reprohack2024/Grupo2/docs/index.html">Ejemplo
+      documento reprohack</ext-link> y
+      <ext-link ext-link-type="uri" xlink:href="https://github.com/R-Ladies-Morelia/Reprohack2024/tree/main/Grupo2">repo</ext-link></p>
+    </list-item>
+  </list>
+  <p><bold>¿Qué es Quarto?</bold></p>
+  <list list-type="bullet">
+    <list-item>
+      <p>Es un sistema de publicación científica y técnica.</p>
+    </list-item>
+    <list-item>
+      <p>Busca facilitar la combinación de texto y código, la
+      publicación de contenido en múltiples formatos, permitir el uso de
+      múltiples lenguajes de programación en una misma plataforma.</p>
+    </list-item>
+    <list-item>
+      <p>Se pueden crear documentos (pdf, word, html), páginas web,
+      blogs, presentaciones, dashboards, libros, manuscritos,
+      aplicaciones interactivas (shiny), entre otras cosas.</p>
+    </list-item>
+    <list-item>
+      <p><ext-link ext-link-type="uri" xlink:href="https://quarto.org/docs/gallery/">Galeria</ext-link></p>
+    </list-item>
+  </list>
+  <p><bold>Objetivo del taller</bold></p>
+  <list list-type="bullet">
+    <list-item>
+      <p>Introducción a la creación de documentos html en Quarto</p>
+    </list-item>
+    <list-item>
+      <p>Introducción a los
+      <ext-link ext-link-type="uri" xlink:href="https://sofiazorrilla.github.io/taller_quarto_ms/">manuscritos</ext-link>
+      en Quarto</p>
+    </list-item>
+  </list>
   <list list-type="order">
-    <list-item>
-      <p>Reproducibilidad en la ciencia</p>
-      <list list-type="bullet">
-        <list-item>
-          <p>Experiencia personal</p>
-        </list-item>
-        <list-item>
-          <p>Experiencia corriendo el código de alguien más</p>
-        </list-item>
-      </list>
-      <p specific-use="wrapper">
-        <fig>
-          <caption><p>Source: Comic number 1869 from PhD Comics
-          Copyrighted artwork by Jorge Cham</p></caption>
-          <graphic mimetype="image" mime-subtype="png" xlink:href="https://carpentries-incubator.github.io/reproducible-publications-quarto/fig/01-fig1.png" />
-        </fig>
-      </p>
-      <list list-type="bullet">
-        <list-item>
-          <p><ext-link ext-link-type="uri" xlink:href="https://github.com/JulietteArchambeau/GOPredEvalPinpin?tab=readme-ov-file">Ejemplo
-          de repositorio real</ext-link> - Juliette Archambeau</p>
-        </list-item>
-        <list-item>
-          <p><ext-link ext-link-type="uri" xlink:href="https://r-ladies-morelia.github.io/Reprohack2024/Grupo2/docs/index.html">Ejemplo
-          documento reprohack</ext-link> y
-          <ext-link ext-link-type="uri" xlink:href="https://github.com/R-Ladies-Morelia/Reprohack2024/tree/main/Grupo2">repo</ext-link></p>
-        </list-item>
-      </list>
-    </list-item>
-    <list-item>
-      <p>¿Qué es Quarto?</p>
-      <list list-type="bullet">
-        <list-item>
-          <p>Es un sistema de publicación científica y técnica.</p>
-        </list-item>
-        <list-item>
-          <p>Busca facilitar la combinación de texto y código, la
-          publicación de contenido en múltiples formatos, permitir el
-          uso de múltiples lenguajes de programación en una misma
-          plataforma.</p>
-        </list-item>
-        <list-item>
-          <p>Se pueden crear documentos (pdf, word, html), páginas web,
-          blogs, presentaciones, dashboards, libros, manuscritos,
-          aplicaciones interactivas (shiny), entre otras cosas.</p>
-        </list-item>
-        <list-item>
-          <p><ext-link ext-link-type="uri" xlink:href="https://quarto.org/docs/gallery/">Galeria</ext-link></p>
-        </list-item>
-      </list>
-    </list-item>
     <list-item>
       <p>¿Cómo hacer un documento de quarto? (html)</p>
       <list list-type="bullet">
@@ -731,6 +762,8 @@ comportamiento en estas especies.</p>
           </list>
         </list-item>
       </list>
+      <p specific-use="wrapper">
+      </p>
     </list-item>
     <list-item>
       <p>¿Cómo hacer un proyecto de manuscrito en quarto?</p>
@@ -738,7 +771,7 @@ comportamiento en estas especies.</p>
         <list-item>
           <p>Crear
           <ext-link ext-link-type="uri" xlink:href="https://github.com/quarto-ext/manuscript-template-rstudio">template</ext-link>
-          en github</p>
+          en github - (use this template)</p>
         </list-item>
         <list-item>
           <p>Clonar el repositorio de github de manera local (se puede
@@ -754,15 +787,17 @@ comportamiento en estas especies.</p>
               <p>Modificar texto</p>
             </list-item>
             <list-item>
+              <p>Insertar citas</p>
+            </list-item>
+            <list-item>
+              <p><ext-link ext-link-type="uri" xlink:href="https://quarto.org/docs/authoring/citations.html"><inline-graphic mimetype="image" mime-subtype="png" xlink:href="img/citas.png" /></ext-link></p>
+            </list-item>
+            <list-item>
               <p>Revisar embeds</p>
             </list-item>
             <list-item>
               <p>Sustituir notebooks por los mios (o correr los que
               vienen por default)</p>
-            </list-item>
-            <list-item>
-              <p>Sustituir archivo de referencias y enseñar a añadir
-              referencias desde Rstudio</p>
             </list-item>
             <list-item>
               <p>Revisar crossreferences de tablas y articulos (comentar
